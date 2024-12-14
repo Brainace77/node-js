@@ -1,0 +1,239 @@
+0 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'audit', 'fix' ]
+1 info using npm@8.5.1
+2 info using node@v12.22.9
+3 timing npm:load:whichnode Completed in 0ms
+4 timing config:load:defaults Completed in 2ms
+5 timing config:load:file:/usr/share/nodejs/npm/npmrc Completed in 10ms
+6 timing config:load:builtin Completed in 10ms
+7 timing config:load:cli Completed in 7ms
+8 timing config:load:env Completed in 1ms
+9 timing config:load:file:/home/ubuntu/node-js/.npmrc Completed in 0ms
+10 timing config:load:project Completed in 1ms
+11 timing config:load:file:/home/ubuntu/.npmrc Completed in 0ms
+12 timing config:load:user Completed in 0ms
+13 timing config:load:file:/etc/npmrc Completed in 0ms
+14 timing config:load:global Completed in 0ms
+15 timing config:load:validate Completed in 0ms
+16 timing config:load:credentials Completed in 2ms
+17 timing config:load:setEnvs Completed in 1ms
+18 timing config:load Completed in 24ms
+19 timing npm:load:configload Completed in 24ms
+20 timing npm:load:setTitle Completed in 0ms
+21 timing config:load:flatten Completed in 3ms
+22 timing npm:load:display Completed in 6ms
+23 verbose logfile /home/ubuntu/.npm/_logs/2024-12-14T16_06_55_540Z-debug-0.log
+24 timing npm:load:logFile Completed in 7ms
+25 timing npm:load:timers Completed in 0ms
+26 timing npm:load:configScope Completed in 0ms
+27 timing npm:load Completed in 38ms
+28 timing arborist:ctor Completed in 1ms
+29 silly audit bulk request {
+29 silly audit   accepts: [ '1.3.8' ],
+29 silly audit   'array-flatten': [ '1.1.1' ],
+29 silly audit   'body-parser': [ '1.20.3' ],
+29 silly audit   bytes: [ '3.1.2' ],
+29 silly audit   'call-bind': [ '1.0.7' ],
+29 silly audit   'content-disposition': [ '0.5.4' ],
+29 silly audit   'content-type': [ '1.0.5' ],
+29 silly audit   cookie: [ '0.7.1' ],
+29 silly audit   'cookie-signature': [ '1.0.6' ],
+29 silly audit   debug: [ '2.6.9' ],
+29 silly audit   'define-data-property': [ '1.1.4' ],
+29 silly audit   depd: [ '2.0.0' ],
+29 silly audit   destroy: [ '1.2.0' ],
+29 silly audit   dotenv: [ '16.4.5' ],
+29 silly audit   'ee-first': [ '1.1.1' ],
+29 silly audit   encodeurl: [ '2.0.0', '1.0.2' ],
+29 silly audit   'es-define-property': [ '1.0.0' ],
+29 silly audit   'es-errors': [ '1.3.0' ],
+29 silly audit   'escape-html': [ '1.0.3' ],
+29 silly audit   etag: [ '1.8.1' ],
+29 silly audit   express: [ '4.21.1' ],
+29 silly audit   finalhandler: [ '1.3.1' ],
+29 silly audit   forwarded: [ '0.2.0' ],
+29 silly audit   fresh: [ '0.5.2' ],
+29 silly audit   'function-bind': [ '1.1.2' ],
+29 silly audit   'get-intrinsic': [ '1.2.4' ],
+29 silly audit   gopd: [ '1.0.1' ],
+29 silly audit   'has-property-descriptors': [ '1.0.2' ],
+29 silly audit   'has-proto': [ '1.0.3' ],
+29 silly audit   'has-symbols': [ '1.0.3' ],
+29 silly audit   hasown: [ '2.0.2' ],
+29 silly audit   'http-errors': [ '2.0.0' ],
+29 silly audit   'iconv-lite': [ '0.4.24' ],
+29 silly audit   inherits: [ '2.0.4' ],
+29 silly audit   'ipaddr.js': [ '1.9.1' ],
+29 silly audit   'media-typer': [ '0.3.0' ],
+29 silly audit   'merge-descriptors': [ '1.0.3' ],
+29 silly audit   methods: [ '1.1.2' ],
+29 silly audit   mime: [ '1.6.0' ],
+29 silly audit   'mime-db': [ '1.52.0' ],
+29 silly audit   'mime-types': [ '2.1.35' ],
+29 silly audit   ms: [ '2.0.0', '2.1.3' ],
+29 silly audit   negotiator: [ '0.6.3' ],
+29 silly audit   'object-inspect': [ '1.13.2' ],
+29 silly audit   'on-finished': [ '2.4.1' ],
+29 silly audit   parseurl: [ '1.3.3' ],
+29 silly audit   'path-to-regexp': [ '0.1.10' ],
+29 silly audit   'proxy-addr': [ '2.0.7' ],
+29 silly audit   qs: [ '6.13.0' ],
+29 silly audit   'range-parser': [ '1.2.1' ],
+29 silly audit   'raw-body': [ '2.5.2' ],
+29 silly audit   'safe-buffer': [ '5.2.1' ],
+29 silly audit   'safer-buffer': [ '2.1.2' ],
+29 silly audit   send: [ '0.19.0' ],
+29 silly audit   'serve-static': [ '1.16.2' ],
+29 silly audit   'set-function-length': [ '1.2.2' ],
+29 silly audit   setprototypeof: [ '1.2.0' ],
+29 silly audit   'side-channel': [ '1.0.6' ],
+29 silly audit   statuses: [ '2.0.1' ],
+29 silly audit   toidentifier: [ '1.0.1' ],
+29 silly audit   'type-is': [ '1.6.18' ],
+29 silly audit   unpipe: [ '1.0.0' ],
+29 silly audit   'utils-merge': [ '1.0.1' ],
+29 silly audit   vary: [ '1.1.2' ]
+29 silly audit }
+30 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 223ms
+31 timing auditReport:getReport Completed in 226ms
+32 silly audit report {
+32 silly audit report   'path-to-regexp': [
+32 silly audit report     {
+32 silly audit report       id: 1101081,
+32 silly audit report       url: 'https://github.com/advisories/GHSA-rhx6-c78j-4q9w',
+32 silly audit report       title: 'Unpatched `path-to-regexp` ReDoS in 0.1.x',
+32 silly audit report       severity: 'moderate',
+32 silly audit report       vulnerable_versions: '<0.1.12',
+32 silly audit report       cwe: [Array],
+32 silly audit report       cvss: [Object]
+32 silly audit report     }
+32 silly audit report   ]
+32 silly audit report }
+33 timing metavuln:cache:get:security-advisory:path-to-regexp:2qdoAnGH3xB469g+aonHSVZDVP7zVBN7zKSrZom+Yx5jyXRqD98gvs0JcbJIcczqsPq3aVnw6g4EVzEWP24sQA== Completed in 8ms
+34 http fetch GET 200 https://registry.npmjs.org/path-to-regexp 60ms (cache miss)
+35 timing metavuln:packument:path-to-regexp Completed in 61ms
+36 timing metavuln:load:security-advisory:path-to-regexp:1101081 Completed in 1ms
+37 timing metavuln:calculate:security-advisory:path-to-regexp:1101081 Completed in 64ms
+38 timing metavuln:cache:get:security-advisory:express:ebtUTbPFP4GLpEWnCv5+nWyKme1GvNGh2ld1QU5lNTXxEKWFf6g6IO59JyRhLIuY6S5UVcC4dpdRfp+Zookh0g== Completed in 2ms
+39 http fetch GET 200 https://registry.npmjs.org/express 48ms (cache miss)
+40 timing metavuln:packument:express Completed in 54ms
+41 timing metavuln:load:security-advisory:express:2qdoAnGH3xB469g+aonHSVZDVP7zVBN7zKSrZom+Yx5jyXRqD98gvs0JcbJIcczqsPq3aVnw6g4EVzEWP24sQA== Completed in 2ms
+42 timing metavuln:calculate:security-advisory:express:2qdoAnGH3xB469g+aonHSVZDVP7zVBN7zKSrZom+Yx5jyXRqD98gvs0JcbJIcczqsPq3aVnw6g4EVzEWP24sQA== Completed in 56ms
+43 timing auditReport:init Completed in 126ms
+44 timing audit Completed in 484ms
+45 timing idealTree:init Completed in 3ms
+46 timing idealTree:userRequests Completed in 1ms
+47 silly idealTree buildDeps
+48 silly fetch manifest express@^4.17.1
+49 silly placeDep ROOT express@4.21.2 REPLACE for: simple-nodejs-app@1.0.0 want: ^4.17.1
+50 silly fetch manifest path-to-regexp@0.1.12
+51 timing idealTree:#root Completed in 29ms
+52 silly placeDep ROOT path-to-regexp@0.1.12 OK for: express@4.21.2 want: 0.1.12
+53 timing idealTree:node_modules/express Completed in 4ms
+54 timing idealTree:node_modules/path-to-regexp Completed in 0ms
+55 timing idealTree:buildDeps Completed in 37ms
+56 timing idealTree:fixDepFlags Completed in 1ms
+57 timing idealTree Completed in 45ms
+58 timing arborist:ctor Completed in 0ms
+59 timing reify:loadTrees Completed in 117ms
+60 timing reify:diffTrees Completed in 3ms
+61 silly reify mark retired [ '/home/ubuntu/node-js/node_modules/express' ]
+62 silly reify mark retired [ '/home/ubuntu/node-js/node_modules/path-to-regexp' ]
+63 silly reify moves {
+63 silly reify   '/home/ubuntu/node-js/node_modules/express': '/home/ubuntu/node-js/node_modules/.express-zit7Y1bZ',
+63 silly reify   '/home/ubuntu/node-js/node_modules/path-to-regexp': '/home/ubuntu/node-js/node_modules/.path-to-regexp-joNIpr2E'
+63 silly reify }
+64 timing reify:retireShallow Completed in 2ms
+65 timing reify:createSparse Completed in 1ms
+66 timing reify:loadBundles Completed in 0ms
+67 silly audit bulk request {
+67 silly audit   accepts: [ '1.3.8' ],
+67 silly audit   'array-flatten': [ '1.1.1' ],
+67 silly audit   'body-parser': [ '1.20.3' ],
+67 silly audit   bytes: [ '3.1.2' ],
+67 silly audit   'call-bind': [ '1.0.7' ],
+67 silly audit   'content-disposition': [ '0.5.4' ],
+67 silly audit   'content-type': [ '1.0.5' ],
+67 silly audit   cookie: [ '0.7.1' ],
+67 silly audit   'cookie-signature': [ '1.0.6' ],
+67 silly audit   debug: [ '2.6.9' ],
+67 silly audit   'define-data-property': [ '1.1.4' ],
+67 silly audit   depd: [ '2.0.0' ],
+67 silly audit   destroy: [ '1.2.0' ],
+67 silly audit   dotenv: [ '16.4.5' ],
+67 silly audit   'ee-first': [ '1.1.1' ],
+67 silly audit   encodeurl: [ '2.0.0', '1.0.2' ],
+67 silly audit   'es-define-property': [ '1.0.0' ],
+67 silly audit   'es-errors': [ '1.3.0' ],
+67 silly audit   'escape-html': [ '1.0.3' ],
+67 silly audit   etag: [ '1.8.1' ],
+67 silly audit   finalhandler: [ '1.3.1' ],
+67 silly audit   forwarded: [ '0.2.0' ],
+67 silly audit   fresh: [ '0.5.2' ],
+67 silly audit   'function-bind': [ '1.1.2' ],
+67 silly audit   'get-intrinsic': [ '1.2.4' ],
+67 silly audit   gopd: [ '1.0.1' ],
+67 silly audit   'has-property-descriptors': [ '1.0.2' ],
+67 silly audit   'has-proto': [ '1.0.3' ],
+67 silly audit   'has-symbols': [ '1.0.3' ],
+67 silly audit   hasown: [ '2.0.2' ],
+67 silly audit   'http-errors': [ '2.0.0' ],
+67 silly audit   'iconv-lite': [ '0.4.24' ],
+67 silly audit   inherits: [ '2.0.4' ],
+67 silly audit   'ipaddr.js': [ '1.9.1' ],
+67 silly audit   'media-typer': [ '0.3.0' ],
+67 silly audit   'merge-descriptors': [ '1.0.3' ],
+67 silly audit   methods: [ '1.1.2' ],
+67 silly audit   mime: [ '1.6.0' ],
+67 silly audit   'mime-db': [ '1.52.0' ],
+67 silly audit   'mime-types': [ '2.1.35' ],
+67 silly audit   ms: [ '2.0.0', '2.1.3' ],
+67 silly audit   negotiator: [ '0.6.3' ],
+67 silly audit   'object-inspect': [ '1.13.2' ],
+67 silly audit   'on-finished': [ '2.4.1' ],
+67 silly audit   parseurl: [ '1.3.3' ],
+67 silly audit   'proxy-addr': [ '2.0.7' ],
+67 silly audit   qs: [ '6.13.0' ],
+67 silly audit   'range-parser': [ '1.2.1' ],
+67 silly audit   'raw-body': [ '2.5.2' ],
+67 silly audit   'safe-buffer': [ '5.2.1' ],
+67 silly audit   'safer-buffer': [ '2.1.2' ],
+67 silly audit   send: [ '0.19.0' ],
+67 silly audit   'serve-static': [ '1.16.2' ],
+67 silly audit   'set-function-length': [ '1.2.2' ],
+67 silly audit   setprototypeof: [ '1.2.0' ],
+67 silly audit   'side-channel': [ '1.0.6' ],
+67 silly audit   statuses: [ '2.0.1' ],
+67 silly audit   toidentifier: [ '1.0.1' ],
+67 silly audit   'type-is': [ '1.6.18' ],
+67 silly audit   unpipe: [ '1.0.0' ],
+67 silly audit   'utils-merge': [ '1.0.1' ],
+67 silly audit   vary: [ '1.1.2' ],
+67 silly audit   express: [ '4.21.2' ],
+67 silly audit   'path-to-regexp': [ '0.1.12' ]
+67 silly audit }
+68 silly tarball no local data for path-to-regexp@https://registry.npmjs.org/path-to-regexp/-/path-to-regexp-0.1.12.tgz. Extracting by manifest.
+69 silly tarball no local data for express@https://registry.npmjs.org/express/-/express-4.21.2.tgz. Extracting by manifest.
+70 http fetch GET 200 https://registry.npmjs.org/path-to-regexp/-/path-to-regexp-0.1.12.tgz 114ms (cache miss)
+71 timing reifyNode:node_modules/path-to-regexp Completed in 121ms
+72 http fetch GET 200 https://registry.npmjs.org/express/-/express-4.21.2.tgz 120ms (cache miss)
+73 timing reifyNode:node_modules/express Completed in 136ms
+74 timing reify:unpack Completed in 136ms
+75 timing reify:unretire Completed in 0ms
+76 timing build:queue Completed in 0ms
+77 timing build:deps Completed in 1ms
+78 timing build Completed in 1ms
+79 timing reify:build Completed in 1ms
+80 timing reify:trash Completed in 6ms
+81 timing reify:save Completed in 18ms
+82 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 175ms
+83 timing auditReport:getReport Completed in 176ms
+84 silly audit report {}
+85 timing auditReport:init Completed in 0ms
+86 timing reify:audit Completed in 177ms
+87 timing reify Completed in 303ms
+88 silly CHANGE node_modules/path-to-regexp
+89 silly CHANGE node_modules/express
+90 timing command:audit Completed in 799ms
+91 verbose exit 0
+92 timing npm Completed in 1065ms
+93 info ok
